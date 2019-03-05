@@ -2,6 +2,12 @@
 //anchor alerts
 const NavASelector = document.querySelectorAll('a');
 
+NavASelector.forEach(function(element){
+  element.addEventListener('click',function(){
+      element.style.color = 'green'
+  } )
+})
+
 NavASelector[0].addEventListener('click', function(event){
     alert('You found the home page!');
     event.preventDefault();
@@ -21,6 +27,11 @@ NavASelector[3].addEventListener('click', function(event){
     alert('Lemme get those digits girl!');
     event.preventDefault();
 });
+
+const textContent = document.querySelector(['.content-section']);
+
+
+console.log(textContent);
 
 //header image animation
 const headerImg = document.querySelector('img');
